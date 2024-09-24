@@ -73,4 +73,26 @@ public class TestConverter {
   public void test32OuncesToPoundsAndOunces() {
     assertEquals("2 lbs 0 oz", converter.toPoundsAndOunces(32));
   }
+
+  @Test
+  public void testNoParameterToPounds() {
+    assertEquals("0 oz", converter.toPounds());
+  }
+
+  @Test
+  public void testNoParamaterToPoundsAndOunces() {
+    assertEquals("0 oz", converter.toPoundsAndOunces());
+  }
+
+  @Test
+  public void testTwelveOzToOz() {
+    assertEquals(12 + " ounces", converter.toOunces(0, 12));
+  }
+
+  @Test
+  public void testThirtyOneOzToOz() {
+    assertEquals(31 + " ounces", converter.toOunces(1, 15));
+  }
+
+  
 }

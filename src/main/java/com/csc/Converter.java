@@ -19,6 +19,11 @@ public class Converter {
     
   }
 
+  public String toPounds()
+  {
+    return "0 oz";
+  }
+
   public String toPoundsAndOunces(int ounces) {
     String answer = "";
     int lb;
@@ -38,5 +43,18 @@ if (lb == 1) {
 
   return answer;
 
+  }
+
+  public String toPoundsAndOunces()
+  {
+    return "0 oz";
+  }
+
+  public String toOunces(int lb, int oz)
+  {
+    int lbToOz = lb * 16;
+    int total = lbToOz + oz;
+
+    return total + " ounces";
   }
 }
